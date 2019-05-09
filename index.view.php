@@ -13,12 +13,14 @@
             padding: 2em;
             text-align: center;
         }
-      .fancy{
 
-            text-decoration: none;
-            display: inline;
+        .breath {
+            padding: 1em;
         }
-
+        .associative {
+            background: #e8e8;
+            padding: 2em;
+        }
     </style>
 </head>
 <body>
@@ -26,11 +28,7 @@
 
         <h1><?= $greeting ?></h1>
     </header>
-    <nav>
-        <ul class="fancy">
-            <li><a href="/about.php">About</a></li>
-        </ul>
-    </nav>
+
 
     <ul>
         <?php   foreach ($names as $name) : ?>
@@ -42,6 +40,36 @@
                 echo "<li>$name</li>";
             };
             ?>
+    </ul>
+
+    <ul>
+    <?php foreach ($animals as $animal):?>
+        <li class="breath"><?= $animal ?></li>
+        <?php endforeach ?>
+    </ul>
+
+    <div class="associative">
+           <ul>
+            <?php foreach($person as $feature=>$val) : ?>
+                <li><strong><?= $feature ?></strong>: <?= $val; ?></li>
+                <?php endforeach ?>
+            </ul>
+    </div>
+
+<h2>Tasks for the day</h2>
+    <ul>
+        <li>
+            <strong>Name: </strong><?= $tasks['title']; ?>
+        </li>
+        <li>
+            <strong>Due: </strong><?= $tasks['due']; ?>
+        </li>
+        <li>
+            <strong>Assigned:</strong> <?= $tasks['assigned_to']; ?>
+        </li>
+        <li>
+            <strong>Status: </strong><?= $tasks['Completed'] ? 'Complete' : 'Incomplete'; ?>
+        </li>
     </ul>
 
 
