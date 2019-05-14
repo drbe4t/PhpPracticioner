@@ -1,4 +1,5 @@
 <?php
+require 'functions.php';
 
 $greeting = "Hello PHP";
 
@@ -31,7 +32,20 @@ $tasks = [
     'title'=>'Design in XD',
     'due'=> 'Next Week',
     'assigned_to'=>'Dan',
-    'completed'=>false,
+    'completed'=>true,
 ];
+
+
+//  pre tags helps to format contetn in the array
+// echo '<pre>';
+
+// die(var_dump($animals));
+
+// echo '</pre>';
+
+// How to make a function
+
+
+echo ageCheck(27);
 
 require 'index.view.php';

@@ -68,7 +68,7 @@
             <strong>Assigned:</strong> <?= $tasks['assigned_to']; ?>
         </li>
         <li>
-            <strong>Status: </strong><?= $tasks['Completed'] ? 'Complete' : 'Incomplete'; ?>
+            <strong>Status: </strong><?= $tasks['completed'] ? 'Complete' : 'Incomplete'; ?>
         </li>
     </ul>
 
